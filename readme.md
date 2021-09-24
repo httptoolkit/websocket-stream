@@ -4,7 +4,9 @@
 
 Use HTML5 [websockets](https://developer.mozilla.org/en-US/docs/WebSockets) using the Node Streams API.
 
-This is a fork of the original [websocket-stream](https://www.npmjs.com/package/websocket-stream) (now unmaintained), for use in HTTP Toolkit.
+This is a fork of the original [websocket-stream](https://www.npmjs.com/package/websocket-stream) (now unmaintained), for use in HTTP Toolkit. This fork:
+
+* Fixes and extends the TypeScript types
 
 ### Usage
 
