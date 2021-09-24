@@ -1,4 +1,4 @@
-# websocket-stream [![Get it on npm](https://img.shields.io/npm/v/@httptoolkit/websocket-stream.svg)](https://www.npmjs.com/package/@httptoolkit/websocket-stream)
+# websocket-stream [![Build Status](https://github.com/httptoolkit/websocket-stream/workflows/CI/badge.svg)](https://github.com/httptoolkit/websocket-stream/actions) [![Get it on npm](https://img.shields.io/npm/v/@httptoolkit/websocket-stream.svg)](https://www.npmjs.com/package/@httptoolkit/websocket-stream)
 
 > _Part of [HTTP Toolkit](https://httptoolkit.tech): powerful tools for building, testing & debugging HTTP(S)_
 
@@ -9,6 +9,7 @@ This is a fork of the original [websocket-stream](https://www.npmjs.com/package/
 * Uses [isomorphic-ws](https://www.npmjs.com/package/isomorphic-ws) so that the 'ws' module is not loaded unnecessarily in browsers
 * Supports WS up to version 8 (note that isomorphic-ws uses * as its ws version, so this will always use the latest compatible release)
 * Fixes and extends the TypeScript types
+* Has a CI build for automated testing
 
 ### Usage
 
