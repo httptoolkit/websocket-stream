@@ -1,15 +1,17 @@
-# websocket-stream
+# websocket-stream [![Get it on npm](https://img.shields.io/npm/v/@httptoolkit/websocket-stream.svg)](https://www.npmjs.com/package/@httptoolkit/websocket-stream)
 
-[![NPM](https://nodei.co/npm/websocket-stream.png?global=true)](https://nodei.co/npm/websocket-stream/)
+> _Part of [HTTP Toolkit](https://httptoolkit.tech): powerful tools for building, testing & debugging HTTP(S)_
 
 Use HTML5 [websockets](https://developer.mozilla.org/en-US/docs/WebSockets) using the Node Streams API.
+
+This is a fork of the original [websocket-stream](https://www.npmjs.com/package/websocket-stream) (now unmaintained), for use in HTTP Toolkit.
 
 ### Usage
 
 This module works in Node or in Browsers that support WebSockets. You can use [browserify](http://github.com/substack/node-browserify) to package this module for browser use.
 
 ```javascript
-var websocket = require('websocket-stream')
+var websocket = require('@httptoolkit/websocket-stream')
 var ws = websocket('ws://echo.websocket.org')
 process.stdin.pipe(ws)
 ws.pipe(process.stdout)
@@ -60,7 +62,7 @@ Default: `true` on the client, `false` on the server.
 Example:
 
 ```js
-var websocket = require('websocket-stream')
+var websocket = require('@httptoolkit/websocket-stream')
 var ws = websocket('ws://realtimecats.com', {
   perMessageDeflate: false
 })
@@ -77,7 +79,7 @@ When used in node.js see the [ws.WebSocket documentation](https://github.com/web
 Using the [`ws`](http://npmjs.org/ws) module you can make a websocket server and use this module to get websocket streams on the server:
 
 ```javascript
-var websocket = require('websocket-stream')
+var websocket = require('@httptoolkit/websocket-stream')
 var wss = websocket.createServer({server: someHTTPServer}, handle)
 
 function handle(stream, request) {
@@ -91,7 +93,7 @@ extension](https://tools.ietf.org/html/rfc7692) to achieve the best
 throughput:
 
 ```javascript
-var websocket = require('websocket-stream')
+var websocket = require('@httptoolkit/websocket-stream')
 var wss = websocket.createServer({
   perMessageDeflate: false,
   server: someHTTPServer
@@ -115,7 +117,7 @@ expressWebSocket(app, null, {
     // ws options here
     perMessageDeflate: false,
 });
- 
+
 app.ws('/bigdata.json', function(ws, req) {
   // convert ws instance to stream
   const stream = websocketStream(ws, {
@@ -125,7 +127,7 @@ app.ws('/bigdata.json', function(ws, req) {
 
   fs.createReadStream('bigdata.json').pipe(stream);
 });
- 
+
 app.listen(3000);
 ```
 

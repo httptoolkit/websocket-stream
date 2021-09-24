@@ -1,5 +1,5 @@
-// Type definitions for websocket-stream 5.3
-// Project: https://github.com/maxogden/websocket-stream#readme
+// Type definitions for @httptoolkit/websocket-stream 6
+// Project: https://github.com/httptoolkit/websocket-stream#readme
 // Original definitions by: Ben Burns <https://github.com/benjamincburns>
 
 import * as WebSocket from 'ws';

@@ -1,15 +1,15 @@
 {
-  "name": "websocket-stream",
+  "name": "@httptoolkit/websocket-stream",
   "version": "5.5.2",
   "license": "BSD-2-Clause",
-  "description": "Use websockets with the node streams API. Works in browser and node",
+  "description": "Use websockets with the node streams API. Works in browser and node, with all current WS versions",
   "scripts": {
     "test": "node test.js",
     "start": "beefy test-client.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/maxogden/websocket-stream.git"
+    "url": "git+ssh://git@github.com/httptoolkit/websocket-stream.git"
   },
   "keywords": [
     "websocket",
@@ -18,10 +18,6 @@
     "streams",
     "realtime"
   ],
-  "_npmUser": {
-    "name": "maxogden",
-    "email": "max@maxogden.com"
-  },
   "dependencies": {
     "duplexify": "^3.5.1",
     "inherits": "^2.0.1",
@@ -46,9 +42,9 @@
     "ws": "./ws-fallback.js"
   },
   "bugs": {
-    "url": "https://github.com/maxogden/websocket-stream/issues"
+    "url": "https://github.com/httptoolkit/websocket-stream/issues"
   },
-  "homepage": "https://github.com/maxogden/websocket-stream#readme",
+  "homepage": "https://github.com/httptoolkit/websocket-stream#readme",
   "main": "index.js",
   "author": ""
 }
