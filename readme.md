@@ -6,6 +6,8 @@ Use HTML5 [websockets](https://developer.mozilla.org/en-US/docs/WebSockets) usin
 
 This is a fork of the original [websocket-stream](https://www.npmjs.com/package/websocket-stream) (now unmaintained), for use in HTTP Toolkit. This fork:
 
+* Uses [isomorphic-ws](https://www.npmjs.com/package/isomorphic-ws) so that the 'ws' module is not loaded unnecessarily in browsers
+* Supports WS up to version 8 (note that isomorphic-ws uses * as its ws version, so this will always use the latest compatible release)
 * Fixes and extends the TypeScript types
 
 ### Usage

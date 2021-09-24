@@ -28,7 +28,7 @@ function WebSocketStream(target, protocols, options) {
   if (protocols && !Array.isArray(protocols) && 'object' === typeof protocols) {
     // accept the "options" Object as the 2nd argument
     options = protocols
-    protocols = null
+    protocols = undefined
 
     if (typeof options.protocol === 'string' || Array.isArray(options.protocol)) {
       protocols = options.protocol;
@@ -68,7 +68,7 @@ function WebSocketStream(target, protocols, options) {
 
     socket.binaryType = 'arraybuffer'
   }
-  
+
   // according to https://github.com/baygeldin/ws-streamify/issues/1
   // Nodejs WebSocketServer cause memory leak
   // Handlers like onerror, onclose, onmessage and onopen are accessible via setter/getter
@@ -83,7 +83,7 @@ function WebSocketStream(target, protocols, options) {
     if (!options.objectMode) {
       stream._writev = writev
     }
-    
+
     if (eventListenerSupport) {
        socket.addEventListener('open', onopen)
     } else {
