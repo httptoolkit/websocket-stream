@@ -8,7 +8,7 @@ This is a fork of the original [websocket-stream](https://www.npmjs.com/package/
 
 * Uses [isomorphic-ws](https://www.npmjs.com/package/isomorphic-ws) so that the 'ws' module is not loaded unnecessarily in browsers
 * Supports WS up to version 8 (note that isomorphic-ws uses * as its ws version, so this will always use the latest compatible release)
-* Fixes and extends the TypeScript types
+* Fixes and extends the TypeScript types, and adds an explicit dependency on @types/ws
 * Has a CI build for automated testing
 * Adds a 'ws-close' event, which exposes the close event data when a websocket is closed by a close frame (before the stream 'close' event, which is different)
 

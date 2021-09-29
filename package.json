@@ -19,6 +19,7 @@
     "realtime"
   ],
   "dependencies": {
+    "@types/ws": "*",
     "duplexify": "^3.5.1",
     "inherits": "^2.0.1",
     "isomorphic-ws": "^4.0.1",
@@ -29,7 +30,6 @@
   },
   "devDependencies": {
     "@types/node": "^11.13.4",
-    "@types/ws": "^7.4.7",
     "beefy": "^2.1.8",
     "browserify": "^16.2.3",
     "concat-stream": "^1.6.2",
