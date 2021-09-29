@@ -7,7 +7,10 @@ import { Duplex } from 'stream';
 import * as http from 'http';
 
 declare namespace WebSocketStream {
-  type WebSocketDuplex = Duplex & { socket: WebSocket };
+  type WebSocketDuplex = Duplex & {
+    socket: WebSocket;
+    on(event: 'ws-close', listener: (close: WebSocket.CloseEvent) => void): WebSocketDuplex;
+  };
 
   class Server extends WebSocket.Server {
     on(event: 'connection', cb: (this: WebSocket.Server, socket: WebSocket, request: http.IncomingMessage) => void): this;
