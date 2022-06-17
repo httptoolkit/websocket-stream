@@ -2,7 +2,7 @@
 
 var Transform = require('readable-stream').Transform
 var duplexify = require('duplexify')
-var WS = require('ws')
+var WS = require('isomorphic-ws')
 var Buffer = require('safe-buffer').Buffer
 
 module.exports = WebSocketStream
